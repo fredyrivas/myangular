@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app="repostest">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>list repo</title>
+	<link rel="stylesheet" href="css/app.css">
+
+	<script src="node_modules/angular/angular.js"></script>
+	<script src="js/controller.js"></script>
+
+</head>
+<body ng-controller="miController">
+
+<p style="margin-top: 30px;">Escribe el nombre d eusuario de github para mostrar una lista de sus repos</p>
+
+<input type="text" ng-model="username" placeholder="ex: fredyrivas">
+
+<a href="#" ng-click="calluser()">Enviar</a>
+
+
+
+<ul style="margin-top: 30px;">
+	<li ng-repeat="myrepos in myrepos">
+		{{myrepos.name}}
+	</li>
+</ul>
+
+
+
+</body>
+</html>
